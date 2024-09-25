@@ -8,40 +8,46 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
-            color: #333;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-
         form {
             background-color: #fff;
-            border: 1px solid #ccc;
-            border-radius: 5px;
             padding: 20px;
-            max-width: 400px;
-            margin: auto;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            background-color: #5cb85c;
-            color: white;
-            padding: 10px;
-            border: none;
             border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
-
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            font-size: 16px;
+            cursor: pointer;
+        }
         button:hover {
             background-color: #4cae4c;
         }
@@ -49,20 +55,22 @@
 </head>
 <body>
     <form>
-        <label for="nome">Nome completo:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+        <h2>Cadastro</h2>
+        <label for="nome">Nome completo</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required>
 
-        <label for="email">Endereço de email:</label>
+        <label for="email">Endereço de email</label>
         <input type="email" name="email" id="email" placeholder="Digite seu email" required>
 
-        <label for="senha">Senha:</label>
+        <label for="senha">Senha</label>
         <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
 
-        <label for="confirmar-senha">Confirmar senha:</label>
+        <label for="confirmar-senha">Confirmar senha</label>
         <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirme sua senha" required>
 
-        <label for="perfil">Perfil:</label>
-        <select name="perfil" id="perfil">
+        <label for="perfil">Perfil</label>
+        <select name="perfil" id="perfil" required>
+            <option value="">Selecione um perfil</option>
             <option value="professor">Professor</option>
             <option value="administrador">Administrador</option>
             <option value="jogador">Jogador</option>
